@@ -1,0 +1,1017 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10px">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Bạn đang sử dụng mạng di động:"
+            android:textColor="#FFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txtsimoperator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:textColor="#FFF"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:text="Seri Sim:"
+            android:textColor="#FFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txtSIMSerialNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:textColor="#FFF"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txtkiemtradichvu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/btnKiemTra"
+            android:layout_toStartOf="@+id/btnKiemTra"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:textColor="#FFF"
+            android:textSize="20sp" />
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:gravity="center"
+    android:textColor="#FFF"
+    android:text="(Hoàn toàn miễn phí!)"/>
+        <Button
+            android:id="@+id/btnKiemTra"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnkiemtr" />
+
+        <LinearLayout
+            android:id="@+id/lnldangkydichvu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="20dp"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/lnldangky"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:textColor="#FFF"
+                    android:text="Đăng ký dịch vụ 3G: " />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#1594cc">
+
+
+                <RadioGroup
+                    android:id="@+id/rdbgroupdichvumang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/rdbviettel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:textColor="#FFF"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="VIETTEL" />
+
+                    <RadioButton
+                        android:id="@+id/rdbvinaphone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:onClick="onRadioButtonClicked"
+                        android:textColor="#FFF"
+                        android:text="VINA PHONE" />
+
+                    <RadioButton
+                        android:id="@+id/rdbmobilphone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:onClick="onRadioButtonClicked"
+                        android:textColor="#FFF"
+                        android:text="MOBI PHONE" />
+                </RadioGroup>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rlldichvumang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/txtnhamang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+
+        //Viettel
+
+        <TableLayout
+            android:id="@+id/tblviettel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="#384c5b">
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Gói cước"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Đăng Ký"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tv3"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Giá cước(vnd)"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tv4"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Dung lượng"
+                    android:textColor="#FFFFFF" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1a242d">
+
+                <TextView
+                    android:id="@+id/tv21"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="MIMAX"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/tv22"
+                    android:layout_weight="1"
+                    android:background="#1a242d"
+                    android:gravity="center"
+                    android:text="Đăng ký"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tv23"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="70000"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tv24"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="600 MB"
+                    android:textColor="#FFFFFF" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1a242d">
+
+                <TextView
+                    android:id="@+id/tv31"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="MIMAX90"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/tv32"
+                    android:layout_weight="1"
+                    android:background="#1a242d"
+                    android:gravity="center"
+                    android:text="Đăng ký"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tv33"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="90000"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tv34"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="1.2 GB"
+                    android:textColor="#FFFFFF" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1a242d">
+
+                <TextView
+                    android:id="@+id/tv41"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="MI10"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/tv42"
+                    android:layout_weight="1"
+                    android:background="#1a242d"
+                    android:gravity="center"
+                    android:text="Đăng ký"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tv43"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="10000"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tv44"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="50 MB"
+                    android:textColor="#FFFFFF" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1a242d">
+
+                <TextView
+                    android:id="@+id/tv51"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="MI30"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/tv52"
+                    android:layout_weight="1"
+                    android:background="#1a242d"
+                    android:gravity="center"
+                    android:text="Đăng ký"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tv53"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="30000"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tv54"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="200 MB"
+                    android:textColor="#FFFFFF" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1a242d">
+
+                <TextView
+                    android:id="@+id/tv61"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="MI50"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/tv62"
+                    android:layout_weight="1"
+                    android:background="#1a242d"
+                    android:gravity="center"
+                    android:text="Đăng ký"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tv63"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="50000"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tv64"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="450 MB"
+                    android:textColor="#FFFFFF" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1a242d">
+
+                <TextView
+                    android:id="@+id/tv71"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="DMAX"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/tv72"
+                    android:layout_weight="1"
+                    android:background="#1a242d"
+                    android:gravity="center"
+                    android:text="Đăng ký"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tv73"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="120000"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tv74"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="1.5 GB"
+                    android:textColor="#FFFFFF" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1a242d">
+
+                <TextView
+                    android:id="@+id/tv81"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="DMAX200"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/tv82"
+                    android:layout_weight="1"
+                    android:background="#1a242d"
+                    android:gravity="center"
+                    android:text="Đăng ký"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tv83"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="200000"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tv84"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="3 GB"
+                    android:textColor="#FFFFFF" />
+            </TableRow>
+        </TableLayout>
+        //vinaphone
+
+        <TableLayout
+            android:id="@+id/tblvinaphone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <TableRow
+                android:id="@+id/vina1"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="#384c5b">
+
+                <TextView
+                    android:id="@+id/tvvn1"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Gói cước"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvvn2"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Đăng Ký"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvvn3"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Giá cước(vnd)"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvvn4"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Dung lượng"
+                    android:textColor="#FFFFFF" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/vina2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1a242d">
+
+                <TextView
+                    android:id="@+id/tvvn21"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="M10"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/tvvn22"
+                    android:layout_weight="1"
+                    android:background="#1a242d"
+                    android:gravity="center"
+                    android:text="Đăng ký"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvvn23"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="10000"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvvn24"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="50 MB + 0.5d/KB"
+                    android:textColor="#FFFFFF" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/vina3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1a242d">
+
+                <TextView
+                    android:id="@+id/tvvn31"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="M25"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/tvvn32"
+                    android:layout_weight="1"
+                    android:background="#1a242d"
+                    android:gravity="center"
+                    android:text="Đăng ký"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvvn33"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="25000"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvvn34"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="150 MB"
+                    android:textColor="#FFFFFF" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/vina4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1a242d">
+
+                <TextView
+                    android:id="@+id/tvvn41"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="M50"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/tvvn42"
+                    android:layout_weight="1"
+                    android:background="#1a242d"
+                    android:gravity="center"
+                    android:text="Đăng ký"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvvn43"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="50000"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvvn44"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="650 MB"
+                    android:textColor="#FFFFFF" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/vina5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1a242d">
+
+                <TextView
+                    android:id="@+id/tvvn51"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="M100"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/tvvn52"
+                    android:layout_weight="1"
+                    android:background="#1a242d"
+                    android:gravity="center"
+                    android:text="Đăng ký"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvvn53"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="100000"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvvn54"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="1.5 GB"
+                    android:textColor="#FFFFFF" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/vina6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1a242d">
+
+                <TextView
+                    android:id="@+id/tvvn61"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="M135"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/tvvn62"
+                    android:layout_weight="1"
+                    android:background="#1a242d"
+                    android:gravity="center"
+                    android:text="Đăng ký"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvvn63"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="135000"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvvn64"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="2.2 GB"
+                    android:textColor="#FFFFFF" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/vina7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1a242d">
+
+                <TextView
+                    android:id="@+id/tvvn71"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="M200"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/tvvn72"
+                    android:layout_weight="1"
+                    android:background="#1a242d"
+                    android:gravity="center"
+                    android:text="Đăng ký"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvvn73"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="200000"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvvn74"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="3.5 GB"
+                    android:textColor="#FFFFFF" />
+            </TableRow>
+        </TableLayout>
+        //mobiphone
+
+        <TableLayout
+            android:id="@+id/tblmobiphone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1a242d"
+            android:visibility="gone">
+
+            <TableRow
+                android:id="@+id/mb1"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="#384c5b">
+
+                <TextView
+                    android:id="@+id/tvmb1"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Gói cước"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvmb2"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Đăng Ký"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvmb3"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Giá cước(vnd)"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvmb4"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Dung lượng"
+                    android:textColor="#FFFFFF" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/mb2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvmb21"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="MIU"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/tvmb22"
+                    android:layout_weight="1"
+                    android:background="#1a242d"
+                    android:gravity="center"
+                    android:text="Đăng Ký"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvmb23"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="70000"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvb24"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="600 MB"
+                    android:textColor="#FFFFFF" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/mb3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvmb31"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="MIU90"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/tvmb32"
+                    android:layout_weight="1"
+                    android:background="#1a242d"
+                    android:gravity="center"
+                    android:text="Đăng Ký"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvmb33"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="90000"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvmb34"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="1 GB"
+                    android:textColor="#FFFFFF" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/mb4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvmb41"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="ZING"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/tvmb42"
+                    android:layout_weight="1"
+                    android:background="#1a242d"
+                    android:gravity="center"
+                    android:text="Đăng Ký"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvmb43"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="15000"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvmb44"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Miễn phí truy cập zing"
+                    android:textColor="#FFFFFF" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/mb5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvmb51"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="M10"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/tvmb52"
+                    android:layout_weight="1"
+                    android:background="#1a242d"
+                    android:gravity="center"
+                    android:text="Đăng Ký"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvmb53"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="10000"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvmb54"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="50 MB"
+                    android:textColor="#FFFFFF" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/mb6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvmb61"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="M25"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/tvmb62"
+                    android:layout_weight="1"
+                    android:background="#1a242d"
+                    android:gravity="center"
+                    android:text="Đăng Ký"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvmb63"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="25000"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvmb64"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="150 MB"
+                    android:textColor="#FFFFFF" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/mb7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvmb71"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="M50"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/tvmb72"
+                    android:layout_weight="1"
+                    android:background="#1a242d"
+                    android:gravity="center"
+                    android:text="Đăng Ký"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvmb73"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="50000"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvmb74"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="450 MB"
+                    android:textColor="#FFFFFF" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/mb8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvmb81"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="M120"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/tvmb82"
+                    android:layout_weight="1"
+                    android:background="#1a242d"
+                    android:gravity="center"
+                    android:text="Đăng Ký"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvmb83"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="120000"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvmb84"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="1.5 GB"
+                    android:textColor="#FFFFFF" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+
+</ScrollView>
+
+
